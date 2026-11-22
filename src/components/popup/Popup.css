@@ -1,0 +1,74 @@
+html.popup-lock,
+html.popup-lock body {
+  overflow: hidden;
+}
+
+html.popup-lock body {
+  padding-right: var(--popup-gap, 0px);
+}
+
+.popup {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  transition: opacity var(--motion);
+}
+
+.popup.is-open {
+  opacity: 1;
+}
+
+.popup-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: #034d61cc;
+  cursor: pointer;
+}
+
+.popup-panel {
+  position: relative;
+  z-index: 1;
+  width: min(900px, 90vw);
+  max-height: 90vh;
+  padding: 40px;
+  overflow: auto;
+  background: var(--none);
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity var(--motion),
+    transform var(--motion);
+}
+
+.popup.is-open .popup-panel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.popup-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background: transparent;
+  color: var(--blueberry);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.popup.is-plain .popup-panel {
+  width: auto;
+  max-width: min(1100px, 92vw);
+  padding: 0;
+  background: transparent;
+  overflow: visible;
+}

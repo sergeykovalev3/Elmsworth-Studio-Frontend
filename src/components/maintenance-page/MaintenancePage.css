@@ -1,0 +1,163 @@
+﻿.care-cover {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  color: var(--none);
+}
+
+.care-cover > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.care-cover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, #034d61c7);
+}
+
+.care-cover-copy {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--edge-space);
+}
+
+.care-cover-heading {
+  position: relative;
+  min-height: 170px;
+  margin-bottom: 16px;
+}
+
+.care-cover-heading span {
+  position: absolute;
+  left: -12px;
+  bottom: 64px;
+  color: var(--carnation-45);
+  font-size: min(10vw, 120px);
+  font-weight: 700;
+  line-height: 0.76;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.care-cover-heading h1 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  max-width: 14em;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.care-split,
+.care-reasons {
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 56px var(--edge-space);
+}
+
+.care-split {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 2em;
+  align-items: center;
+}
+
+.care-split > img {
+  width: 100%;
+  min-height: 320px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+  border-bottom-right-radius: 160px;
+}
+
+.care-split h2,
+.care-reasons h2 {
+  margin: 0 0 16px;
+  font-size: 40px;
+  line-height: 1.15;
+}
+
+.care-split p {
+  margin: 0 0 16px;
+}
+
+.care-reasons {
+  background: var(--carnation);
+  max-width: none;
+}
+
+.care-reasons h2,
+.care-reasons > div {
+  max-width: 1520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.care-reasons h2 {
+  text-align: center;
+}
+
+.care-reasons > div {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.care-reasons article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 8px 0;
+  text-align: center;
+}
+
+.care-reasons article img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.care-reasons h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.care-reasons p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.care-bottom {
+  display: block;
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+}
+
+@media (max-width: 991px) {
+  .care-split,
+  .care-reasons > div {
+    grid-template-columns: 1fr;
+  }
+
+  .care-cover-heading h1 {
+    font-size: 34px;
+  }
+
+  .care-bottom {
+    height: 320px;
+  }
+}

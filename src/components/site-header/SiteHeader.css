@@ -1,0 +1,29 @@
+.site-nav {
+  position: relative;
+  z-index: 20;
+  font-size: 16px;
+}
+
+@media (max-width: var(--bp-laptop)) {
+  .site-nav.is-open {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 41;
+  }
+
+  .site-nav.is-open .bottom-nav {
+    padding-right: var(--scrollbar, 0px);
+  }
+}
+
+html.nav-lock,
+html.nav-lock body {
+  overflow: hidden;
+}
+
+html.nav-lock body {
+  padding-top: var(--nav-bar, 0px);
+  padding-right: var(--scrollbar, 0px);
+}

@@ -1,0 +1,16 @@
+.consult-form {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.consult-form input,
+.consult-form textarea,
+.consult-form button {
+  font: inherit;
+  padding: 0.5rem 0.75rem;
+}
+
+.consult-form textarea {
+  min-height: 6rem;
+}

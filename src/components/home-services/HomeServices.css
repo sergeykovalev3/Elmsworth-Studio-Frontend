@@ -1,0 +1,141 @@
+﻿.home-services {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 46px var(--edge-space) 50px;
+}
+
+.home-services-heading {
+  position: relative;
+  width: 100%;
+  min-height: 155px;
+  margin-top: 40px;
+  padding-top: 45px;
+  padding-bottom: 17px;
+}
+
+.home-services-wash {
+  position: absolute;
+  left: -30px;
+  bottom: 52px;
+  color: var(--carnation-45);
+  font-size: min(12vw, 150px);
+  font-weight: 700;
+  line-height: 0.76;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.home-services-title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  margin: 0;
+  font-size: min(10vw, 50px);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.home-services-intro {
+  margin: 0;
+  max-width: 48rem;
+}
+
+.home-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+
+.home-service {
+  position: relative;
+  display: block;
+  height: 200px;
+  overflow: hidden;
+  color: var(--none);
+  text-decoration: none;
+}
+
+.home-service img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--motion);
+}
+
+.home-service::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #034d6159;
+  transition: background-color var(--motion);
+}
+
+.home-service span {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-top: 20px;
+  padding: 0 20px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.home-service:hover {
+  color: var(--none);
+}
+
+.home-service:hover img {
+  transform: scale(1.06);
+}
+
+.home-service:hover::after {
+  background: #034d6180;
+}
+
+@media (max-width: 991px) {
+  .home-services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-services-wash {
+    display: none;
+  }
+
+  .home-services-heading {
+    min-height: 0;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .home-services-title {
+    position: relative;
+  }
+
+  .home-services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.home-services-note {
+  margin: 0.5em 0 0;
+}
+
+.home-services-call {
+  color: var(--spearmint);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--motion);
+}
+
+.home-services-call:hover {
+  color: var(--green-hover);
+}

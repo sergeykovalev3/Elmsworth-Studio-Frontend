@@ -1,0 +1,128 @@
+.project-film {
+  max-width: 1280px;
+  margin: 40px auto 0;
+  padding: 0 var(--edge-space);
+}
+
+.project-film iframe,
+.project-film-poster {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: var(--blueberry);
+  position: relative;
+  display: block;
+  padding: 0;
+  cursor: pointer;
+}
+
+.project-film-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-film-poster span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: var(--spearmint);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+}
+
+.project-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-bottom: 24px;
+}
+
+.project-story {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 12px var(--edge-space) 0;
+  font-size: 22px;
+  line-height: 1.45;
+}
+
+.project-story strong {
+  font-weight: 700;
+}
+
+.project-story em {
+  font-style: italic;
+}
+
+.project-story h1,
+.project-story h2,
+.project-story h3 {
+  margin: 0.8em 0 0.35em;
+  font-weight: 600;
+  color: var(--blueberry);
+  line-height: 1.15;
+}
+
+.project-story h1 {
+  font-size: 48px;
+}
+
+.project-story h2 {
+  font-size: 36px;
+}
+
+.project-story h3 {
+  font-size: 28px;
+}
+
+.project-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--edge-space);
+  box-sizing: border-box;
+}
+
+.project-photo {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.project-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-popup-photo {
+  display: block;
+  width: 100%;
+  max-height: 86vh;
+  object-fit: contain;
+}
+
+@media (max-width: 991px) {
+  .project-photos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .project-photos {
+    grid-template-columns: 1fr;
+  }
+}

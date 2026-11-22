@@ -1,0 +1,54 @@
+.home-process {
+  background: var(--carnation);
+}
+
+.home-process-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 24px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 46px var(--edge-space);
+  font-size: 20px;
+}
+
+.home-process-intro,
+.home-process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.home-process-title {
+  margin: 0;
+  width: 100%;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.home-process-title span {
+  display: block;
+  color: var(--blueberry);
+  font-weight: 600;
+}
+
+.home-process-icon {
+  height: 50px;
+  width: auto;
+}
+
+.home-process-step h3 {
+  margin: 0;
+  color: var(--blueberry);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.home-process-step p {
+  margin: 0;
+  font-size: 16px;
+}

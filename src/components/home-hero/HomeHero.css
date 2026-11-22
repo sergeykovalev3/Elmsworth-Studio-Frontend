@@ -1,0 +1,137 @@
+.home-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+}
+
+.home-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image: linear-gradient(
+    90deg,
+    var(--blueberry-overlay),
+    transparent
+  );
+}
+
+.home-hero-slider {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.home-hero-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.home-hero-track.is-instant {
+  transition: none;
+}
+
+.home-hero-slide {
+  flex: 0 0 100%;
+  height: 100%;
+}
+
+.home-hero-image {
+  display: block;
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+}
+
+.home-hero-copy {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--edge-space);
+}
+
+.home-hero-copy-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+  max-width: 450px;
+}
+
+.home-hero-title {
+  margin: 0;
+  color: var(--none);
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 55px;
+}
+
+.home-hero-accent {
+  color: var(--carnation);
+  font-weight: 700;
+}
+
+.home-hero-text {
+  margin: 0;
+  color: var(--none);
+}
+
+.home-hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  background: var(--spearmint);
+  color: var(--none);
+  font-size: 18px;
+  line-height: 23px;
+  text-decoration: none;
+  transition: box-shadow var(--motion);
+}
+
+.home-hero-button:hover {
+  color: var(--none);
+  box-shadow: 0 4px 9px 4px var(--spearmint-50);
+}
+
+.home-hero-chevron {
+  display: block;
+  width: 10px;
+  height: 15px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero-track {
+    transition: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-hero {
+    height: 500px;
+  }
+
+  .home-hero-title {
+    font-size: 36px;
+    line-height: 1.1;
+  }
+
+  .home-hero-text {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,14 @@
+
+
+.turf-bottom {
+  display: block;
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+}
+
+@media (max-width: 991px) {
+  .turf-bottom {
+    height: 320px;
+  }
+}

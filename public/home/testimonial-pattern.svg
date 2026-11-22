@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160" fill="none">
+  <g fill="#ffffff" fill-opacity="0.08">
+    <path d="M28 118c2-10 10-18 20-22-6 8-6 14 0 22-8 0-16-4-20 0Z"/>
+    <path d="M48 96c6 4 10 10 12 18H40c2-8 4-14 8-18Z" opacity="0.55"/>
+    <circle cx="48" cy="114" r="2.2"/>
+    <text x="68" y="112" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="0.28em">ELMSWORTH</text>
+  </g>
+</svg>

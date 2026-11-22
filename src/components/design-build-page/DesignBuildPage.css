@@ -1,0 +1,301 @@
+﻿.db-cover {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  color: var(--none);
+}
+
+.db-cover > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.db-cover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, #034d61c7);
+}
+
+.db-cover-copy {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--edge-space);
+}
+
+.db-cover h1 {
+  max-width: 16em;
+  margin: 0 0 12px;
+  font-size: min(5vw, 52px);
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.db-cover p {
+  max-width: 36rem;
+  margin: 0 0 18px;
+  font-size: 20px;
+}
+
+.db-button {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  gap: 12px;
+  margin-top: 8px;
+  padding: 12px 16px;
+  border-radius: 5px;
+  background: var(--spearmint);
+  color: var(--none);
+  font-size: 18px;
+  text-decoration: none;
+  transition: background-color var(--motion), box-shadow var(--motion);
+}
+
+.db-button:hover {
+  background: var(--green-hover);
+  color: var(--none);
+}
+
+.db-button img {
+  width: 10px;
+  height: 15px;
+}
+
+.db-split,
+.db-vision,
+.db-process {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 2.5em;
+  align-items: center;
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 56px var(--edge-space);
+}
+
+.db-split-reverse {
+  grid-template-columns: 1fr 0.8fr;
+}
+
+.db-split-reverse img {
+  order: 2;
+}
+
+.db-split > img,
+.db-vision > img,
+.db-process > img {
+  width: 100%;
+  min-height: 360px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+  border-bottom-right-radius: 160px;
+}
+
+.db-split p,
+.db-vision p,
+.db-process > p,
+.db-projects > p,
+.db-areas > p {
+  margin: 0 0 14px;
+}
+
+.db-split ul,
+.db-vision ul,
+.db-areas ul {
+  margin: 0 0 14px;
+  padding-left: 1.2em;
+  list-style: disc;
+}
+
+.db-split .db-note {
+  margin: 16px 0 0;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.db-projects {
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 56px var(--edge-space) 72px;
+}
+
+.db-why {
+  background: var(--carnation);
+}
+
+.db-why-inner {
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 56px var(--edge-space);
+}
+
+.db-why h2,
+.db-process h2,
+.db-projects h2,
+.db-areas h2,
+.db-split h2,
+.db-vision h2 {
+  margin: 0 0 12px;
+  font-size: 40px;
+  line-height: 1.15;
+}
+
+.db-why-inner > div {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.db-why article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 240px;
+  padding: 24px 16px;
+  border: 2px solid var(--spearmint);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.db-why article img {
+  width: 82px;
+  height: 82px;
+  object-fit: contain;
+}
+
+.db-why p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.db-process ol {
+  display: grid;
+  gap: 18px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.db-process li {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.db-process li span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--blueberry);
+  color: var(--none);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.db-process h3,
+.db-project h3 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.db-vision {
+  grid-template-columns: 1fr 0.8fr;
+}
+
+.db-projects > div {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 28px;
+}
+
+.db-project {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+  transition: transform var(--motion);
+}
+
+.db-project img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.db-project h3 {
+  transition: color var(--motion);
+}
+
+.db-project:hover {
+  transform: translateY(-8px);
+}
+
+.db-project:hover h3 {
+  color: var(--spearmint);
+}
+
+.db-bleed {
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.db-begin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 80px 24px;
+  background-image: linear-gradient(95deg, var(--blueberry), var(--spearmint));
+  color: var(--none);
+  text-align: center;
+}
+
+.db-begin h2 {
+  margin: 0;
+  font-size: 44px;
+}
+
+.db-begin p {
+  max-width: 44rem;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .db-split,
+  .db-split-reverse,
+  .db-vision,
+  .db-why-inner > div,
+  .db-projects > div,
+  .db-process {
+    grid-template-columns: 1fr;
+  }
+
+  .db-split-reverse img {
+    order: 0;
+  }
+
+  .db-cover h1 {
+    font-size: 36px;
+  }
+}

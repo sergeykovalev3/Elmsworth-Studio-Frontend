@@ -1,0 +1,70 @@
+.static-page {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr;
+  gap: 1.5em;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 46px var(--edge-space) 64px;
+}
+
+.static-page-photo {
+  width: 100%;
+  min-height: 280px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+  border-bottom-right-radius: 160px;
+}
+
+.static-page-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8em;
+}
+
+.static-page-copy h2 {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.15;
+}
+
+.static-page-copy p {
+  margin: 0;
+}
+
+.static-page-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  background: var(--spearmint);
+  color: var(--none);
+  font-size: 18px;
+  line-height: 23px;
+  text-decoration: none;
+  transition: box-shadow var(--motion);
+}
+
+.static-page-button:hover {
+  color: var(--none);
+  box-shadow: 0 4px 9px 4px var(--spearmint-50);
+}
+
+.static-page-button img {
+  width: 10px;
+  height: 15px;
+}
+
+.static-page:not(:has(.static-page-photo)) {
+  grid-template-columns: 1fr;
+  max-width: 800px;
+}
+
+@media (max-width: 991px) {
+  .static-page {
+    grid-template-columns: 1fr;
+  }
+}
